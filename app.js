@@ -21,10 +21,19 @@ const renderList = doc => {
     const li = document.createElement('li');
     const name = document.createElement('span');
     const city = document.createElement('span');
+    const cross = document.createElement('div');
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
     city.textContent = doc.data().city;
+    cross.textContent = 'x';
     li.appendChild(name);
     li.appendChild(city);
+    li.appendChild(cross);
     cafeList.appendChild(li);
+
+    //deleting data
+    cross.addEventListener('click', e => {
+        const id = e.target.parentElement.getAttribute('data-id');
+        db.collection('cafes').doc(id).delete();
+    });
 }
