@@ -13,7 +13,29 @@
             <ul id="cafe-list"></ul>
 
         </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDpacDDEJ77QKzOWazhXkM1DlFYGJM1JcQ",
+            authDomain: "vue-firebase-hosting-16e08.firebaseapp.com",
+            databaseURL: "https://vue-firebase-hosting-16e08.firebaseio.com",
+            projectId: "vue-firebase-hosting-16e08",
+            storageBucket: "vue-firebase-hosting-16e08.appspot.com",
+            messagingSenderId: "1091973436014",
+            appId: "1:1091973436014:web:6a3ddd5093a0461b09cc7f",
+            measurementId: "G-JEE43XPCWG"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
         <script src="app.js"></script>
     </body>
 </html>
